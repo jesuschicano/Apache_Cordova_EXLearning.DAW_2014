@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplos de manejador de eventos Apache Cordova</title>
+
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Esperar a que carguen las librerias API del dispositivo
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // Las APIs del dispositivo estan disponibles
+    //
+    function onDeviceReady() {
+        // Escuchadores de eventos
+        document.addEventListener("backbutton", onBackKeyDown, false);
+        document.addEventListener("menubutton", onMenuKeyDown, false);
+    }
+
+    // acciones
+    //
+
+    function alertDismissed() {
+    // Esto seria el callback del dialogo, para este ejemplo no vamos a utilizarlo
+    }
+
+    function onBackKeyDown() {
+        alert("retroceso");
+    }
+    function onMenuKeyDown() {
+        alert("menu");
+    }
+
+    </script>
+  </head>
+  <body onload="onLoad()">
+	<div class="app">
+            <h1>Manejador de Eventos</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Cargando...</p>
+                <p class="event received">LISTO!!!</p>
+				<p>Pulsa los botones de tu dispositivo para ver los mensajes de dialogo</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+  </body>
+</html>
