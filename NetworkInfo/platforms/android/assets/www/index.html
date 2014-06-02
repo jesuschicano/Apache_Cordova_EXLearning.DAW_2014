@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabla.css" />
+        <title>Network Info Plugin</title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+
+		// Wait for device API libraries to load
+		//
+		function onLoad() {
+			document.addEventListener("deviceready", onDeviceReady, false);
+		}
+
+		// mostramos en un mensaje de javascript el tipo de conexión que utiliza el dispositivo
+
+		function onDeviceReady() {
+			$(document).ready(function(){
+		
+				function checkConnection() {
+					var networkState = navigator.connection.type; //Este plugin trabaja con el objeto CONNECTION
+		
+					var states = {};
+					states[Connection.UNKNOWN]  = 'DESCONOCIDO';
+					states[Connection.ETHERNET] = 'ETHERNET';
+					states[Connection.WIFI]     = 'CONECTADO A WIFI';
+					states[Connection.CELL_2G]  = 'CONEXION 2G';
+					states[Connection.CELL_3G]  = 'CONEXION 3G';
+					states[Connection.CELL_4G]  = 'CONEXION 4G';
+					states[Connection.CELL]     = 'CONEXION MOVIL ESTANDAR';
+					states[Connection.NONE]     = 'SIN CONEXION';
+					
+					return states[networkState];
+				}
+				
+				$("#conx").text(checkConnection());
+			});
+		}		
+		</script>
+    </head>
+    <body onload="onLoad()">
+        <div class="app">
+            <h1>ESTADO DE LA CONEXION</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+		<div class="generatecss_dot_com_table">
+			<table>
+				<tr>
+					<td>TIPO DE CONEXION</td>
+				</tr>
+				<tr>
+					<td id="conx"></td>
+				</tr>
+			</table>
+		</div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
