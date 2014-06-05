@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Control Cabinets</title>
+	<link rel="stylesheet" href="../css/style.css" type="text/css" >
+  <script type="text/javascript" src="../js/jquery.js"></script>
+</head>
+<body>
+	<div id="content">
+    <span id="centrar"><img src="../img/logo.png" id="logo"/><img src="../img/image003.jpg" id="logo2"/></span>
+    <ul class="submenu">
+    	<li id="pawel" class="list">Pawel Schick <br/><img src="../img/pl.jpg"/>  <img src="../img/us.jpg"/></li>
+      <li id="pior" class="list">Piotr Kłysz <br/> <img src="../img/pl.jpg"/> <img src="../img/us.jpg"/></li>
+      <li id="monika" class="list">Monika Flig-Gaweł <br/> <img src="../img/pl.jpg"/> <img src="../img/ge.jpg"/></li>
+      <li id="mariusz" class="list">Mariusz Gaik <br/> <img src="../img/pl.jpg"/> <img src="../img/us.jpg"/> <img src="../img/ge.jpg"/></li>
+      <li id="ana" class="list">Anna Zgorecka-Plachytka <br/> <img src="../img/pl.jpg"/> <img src="../img/us.jpg"/> <img src="../img/fr.jpg"/></li>
+      <li><a href="../index.html">Back <img src="../img/back.png" id="back"/></a></li> 
+    </ul>
+  </div><!--content-->
+  <span id="centrar"><img src="../img/zpas2.jpg" class="photo"></span>
+<!--Los datos de los contactos es: http://zpasgroup.co.uk/wp/en/kontakt/dane-podstawowe/sales-and-marketing-zpas-group/-->
+  <script type="text/javascript" src="../cordova.js"></script>
+  <script type="text/javascript">
+    // CONTACTS
+    //
+
+    // carga de API
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Una vez cargada la API
+    //
+    function onDeviceReady(){
+      // carga de contactos
+      var pawel = $("#pawel");
+      var pior = $("#pior");
+      var monika = $("#monika");
+      var mariusz = $("#mariusz");
+      var ana = $("#ana");
+
+      // Al pulsar en pawel
+      //
+      pawel.click(function(){
+        navigator.notification.alert(
+          "Tel.: +48 74 872 6547\ne-mail: pawel.schick@zpas.net",
+          null,
+          "Pawel Schick",
+          "OK");
+      });
+
+      // Al pulsar en Pior
+      //
+      pior.click(function(){
+        navigator.notification.alert(
+          "Tel.: +48 74 873 54 69\nmob.: +48 667 992 300\ne-mail: piotr.klysz@zpas.net",
+          null,
+          "Piotr Kłysz",
+          "OK");
+      });
+
+      // Al pulsar en monika
+      //
+      monika.click(function(){
+        navigator.notification.alert(
+          "Tel.: +48 74 873 54 66\nmob.: +48 605 622 244\ne-mail: monika.flig@zpas.net",
+          null,
+          "Monika Flig-Gaweł",
+          "OK");
+      });
+
+      // Al pulsar en mariusz
+      //
+      mariusz.click(function(){
+        navigator.notification.alert(
+          "Tel.: +48 74 873 54 65\nmob.: +48 667 992 500\ne-mail: mariusz.gaik@zpas.net",
+          null,
+          "Mariusz Gaik",
+          "OK");
+      });
+
+      // Al pulsar en anna
+      //
+      ana.click(function(){
+        navigator.notification.alert(
+          "Tel.: +48 74 873 5463\ne-mail: azp@zpas.net",
+          null,
+          "Anna Zgorecka-Plachytka",
+          "OK");
+      });
+    }
+  </script>
+</body>
+</html>

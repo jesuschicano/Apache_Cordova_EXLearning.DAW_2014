@@ -1,0 +1,138 @@
+#amazingslider-1{
+    display:block;
+    position:relative;
+    margin:16px auto 32px;
+    box-shadow: 0 0 20px white;
+
+}
+
+article{
+    padding:5px;
+    border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: 0 0 5px white;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#back{
+    width: 20px;
+}
+
+body{
+    font-family: tahoma;
+}
+
+article > ul > li {
+list-style:url(../img/lista.gif);
+}
+
+#centrar{
+    display:block;
+    text-align:center;  
+}
+
+#content{
+}
+
+#content2{
+    background: #656a71;
+    color: white;
+}
+
+.back{
+    background: white;
+    color: gray;
+}
+
+.list{
+    color: white;
+    border-bottom: 1px solid rgba(0,0,0, 0.2);
+}
+
+#logo{
+    width:45%;
+    margin-right: 5%;
+}
+
+#logo2{
+    width:45%;
+    margin-left: 5%;
+}
+
+.menu{
+    padding:0;
+    list-style:none;
+    width:100%;
+    font-size:18px;
+    background:#e2383f;
+    border: 1px solid red;
+    border-radius: 5px;
+    text-align: center;
+}
+ 
+.menu ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    height:0;
+    overflow: hidden;
+    
+}
+.menu li a{
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0, 0.2);
+    border-top: 1px solid rgba(255,255,255, 0.2);
+    background: #e2383f;
+    text-decoration:none;
+    color:#FFF;
+    text-shadow: 1px 0px 1px rgba(0,0,0,0.2);
+    filter: dropshadow(color=#000, offx=1, offy=0);
+    padding:10px;
+    padding-left:20px;
+}
+
+p{
+    font-family: mifuente;
+}
+
+.photo{
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.submenu{
+    padding:0;
+    list-style:none;
+    width:100%;
+    font-size:18px;
+    background:#656a71;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.submenu li a{
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0, 0.2);
+    border-top: 1px solid rgba(255,255,255, 0.2);
+    background: #656a71;
+    text-decoration:none;
+    color:#FFF;
+    text-shadow: 1px 0px 1px rgba(0,0,0,0.2);
+    filter: dropshadow(color=#000, offx=1, offy=0);
+    padding:10px;
+    padding-left:20px;
+}
+
+.tittle{
+    text-align: center;
+}
+
+.type2{
+    background: white;
+    color: black;
+}
+
+ 
